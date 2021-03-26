@@ -26,21 +26,37 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-class myComponent extends React.Component{
-  constructor(){
-  super()
-  state = {
-    year:2016,
-    name: 'Nader Dabit',
-    colors: ['blue']
+class App extends React.Component{
+  constructor() {
+    super();
+    this.state = {
+      year: 2021,
+      leapYear: true,
+      name: 'Sang Jun Park',
+      topics: ['React', 'React Native', 'JavaScript'],
+      info: {
+        paperback: true,
+        length: '335 pages',
+        type: 'programming',
+      }
+    }
   }
-  }
-  render(){
+  
+  render() {
+    let leapyear = <Text>this is not a leapyear!</Text>
+    if (this.state.leapYear) {
+      leapyear = <Text>this is a leapyear</Text>
+    }
     return(
       <View>
-        <Text>my name is: {this.state.name}</Text>
-        <Text>the year is: {this.state.year}</Text>
-        <Text>my colors: {this.state.colors[0]}</Text>
+        <Text>
+        the year is : { this.state.year }
+
+        </Text>
+        <Text>length: {this.state.info.length} </Text>
+        <Text>type: {this.state.info.type} </Text>     
+        <Text>topics: {this.state.topics[1]} </Text>  
+        {leapyear}  
       </View>
     )
   }
