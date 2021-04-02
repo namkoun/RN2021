@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-// 예 2.19
+
 import React from 'react';
 import type {Node} from 'react';
 import {
@@ -27,21 +27,24 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 class App extends React.Component{
-  handleClick(){
-      this._timeout = setTimeout(()=>{
-          this.openWidget();
-      },2000);
   
+  render(){
+    let book="React Native in Action!"
+    return (
+      <BookDisplay book ={ book } />
+    )
+  }
+  
+    
 }
-componentWillUnmount(){
-    clearTimeout(this._timeout);
+class BookDisplay extends React.Component{
+  render() {
+    return (
+      <View>
+        <Text>{ this.props.book }</Text>
+      </View>
+    )
+  }
 }
-render(){
-    return(
-        //SomeComponent가 없어서 안됨
-        <SomeComponent handleClick={()=> this.handleClick()}></SomeComponent>
-    ) 
-}
-}
-export default App;
 
+export default App;
