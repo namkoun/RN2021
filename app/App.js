@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { View, ScrollView, StyleSheet } from 'react-native'
 import Heading from './Heading'
+import Input from './Input'
 class App extends Component{
     constructor(){
         super()
@@ -10,12 +11,20 @@ class App extends Component{
             type:'All'
         }
     }
+    inputChange(inputValue){
+        console.log('input: ',inputValue)
+        this.setState({inputValue})
+    }
     render() {
+        const {inputValue}=this.state
         return(
             <View style={styles.container}>
                 <ScrollView keyboardShouldPersistTaps='always' 
                  style={styles.content}>
                 <Heading />
+                <Input 
+                inputValue={inputValue}
+                inputChange={(text) => this.inputChange(text)} />
                 </ScrollView>
             </View>
         )
