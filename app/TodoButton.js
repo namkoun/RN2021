@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, TouchableHighlight, StyleSheet } from 'react-native'
+import {Text, TouchableHighlight, StyleSheet} from 'react-native'
 
 const TodoButton = ({ onPress, complete, name }) => (    
   <TouchableHighlight
@@ -9,8 +9,7 @@ const TodoButton = ({ onPress, complete, name }) => (
     <Text style={[
       styles.text,
       complete ? styles.complete : null,    
-      name === 'Delete' ? styles.deleteButton : null ]}    
-     >
+      name === 'Delete' ? styles.deleteButton : null ]}>
       {name}
     </Text>
   </TouchableHighlight>
@@ -36,4 +35,4 @@ const styles = StyleSheet.create({
     color: 'rgba(175, 47, 47, 1)'
   }
 })
-export default TodoButtton
+export default TodoButton

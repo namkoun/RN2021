@@ -14,10 +14,12 @@ class App extends Component{
             inputValue:'',
             todos:[],
             type:'All',
+
             
         }
         this.submitTodo=this.submitTodo.bind(this)
-        this.toggleComlete = this.toggleComlete.bind(this)
+        this.toggleComplete = this.toggleComplete.bind(this)
+        this.deleteTodo = this.deleteTodo.bind(this)
     }
     inputChange(inputValue){
         console.log('input: ',inputValue)
@@ -47,7 +49,7 @@ class App extends Component{
         todos = todos.filter((todo) => todo.todoIndex !==todoIndex)
         this.setState({todos})
     }
-    toggleComlete (todoIndex){
+    toggleComplete (todoIndex){
         let todos = this.state.todos
 
 todos.forEach((todo) =>{
@@ -68,8 +70,11 @@ this.setState({todos})
                 <Input 
                 inputValue={inputValue}
                 inputChange={(text) => this.inputChange(text)} />
-                <TodoList todos={todos} />
-                <Button submitTodo={this.submitTodo}></Button>
+                <TodoList 
+                toggleComplete = {this.toggleComplete}
+                deleteTodo={this.deleteTodo}
+                todos={todos} />
+                <Button submitTodo={this.submitTodo} />
                 </ScrollView>
             </View>
         )
