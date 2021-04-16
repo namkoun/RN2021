@@ -3,6 +3,7 @@ import { View, ScrollView, StyleSheet } from 'react-native'
 import Button from './Button'
 import Heading from './Heading'
 import Input from './Input'
+import TodoList from './TodoList'
 
 let todoIndex = 0
 
@@ -12,9 +13,11 @@ class App extends Component{
         this.state={
             inputValue:'',
             todos:[],
-            type:'All'
+            type:'All',
+            
         }
         this.submitTodo=this.submitTodo.bind(this)
+        this.toggleComlete = this.toggleComlete.bind(this)
     }
     inputChange(inputValue){
         console.log('input: ',inputValue)
@@ -35,8 +38,28 @@ class App extends Component{
             console.log('State: ',this.state)       // inputvalue를 빈 문자열로 재지정
         })
     }
+    
+
+    
+    
+    deleteTodo (todoIndex){
+        let {todos}= this.state
+        todos = todos.filter((todo) => todo.todoIndex !==todoIndex)
+        this.setState({todos})
+    }
+    toggleComlete (todoIndex){
+        let todos = this.state.todos
+
+todos.forEach((todo) =>{
+    if(todo.todoIndex ===todoIndex){
+        todo.complete = !todo.complete
+    }
+})    
+this.setState({todos})
+}
+
     render() {
-        const {inputValue}=this.state
+        const {inputValue, todos}=this.state
         return(
             <View style={styles.container}>
                 <ScrollView keyboardShouldPersistTaps='always' 
@@ -45,6 +68,7 @@ class App extends Component{
                 <Input 
                 inputValue={inputValue}
                 inputChange={(text) => this.inputChange(text)} />
+                <TodoList todos={todos} />
                 <Button submitTodo={this.submitTodo}></Button>
                 </ScrollView>
             </View>
