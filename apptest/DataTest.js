@@ -4,9 +4,9 @@ import { View, Text } from 'react-native'
 function DataTest(props){
     const {id,name,foo} = props
 
-     fooList = foo.map((foos) => {
+     fooList = foo.map((foos, i) => {
         return(
-            <Text>{foos}</Text>
+            <Text key={i}>{foos}</Text>
         )
     }
         

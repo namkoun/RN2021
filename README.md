@@ -3,11 +3,18 @@
 
 React-Native 2021
 
+# 05월 07일
+>1. 중간고사 풀이
+>2. 구조분해 할당, 기본할당, 새로운변수 이름으로 할당하기 (모질라)
+>3.  index,mycomponent,mycomponentstyles 등 컴포넌트 이름변경,파일이름변경 (저번주 실습)
+>4. 배경색(background-color) 설명
+>5. 오늘 실습(App.js) backgroundColor넣기
+>6. border 스타일 설명
+
+
 # 04월 30일
 >1. 외부 스타일 적용하기
 >2. bind()함수 사용 방법 
-
-
 
 # 04월 23일
 >1. 중간고사 임포트 Text 를 못함 추가하면 정상작동 
