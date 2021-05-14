@@ -1,24 +1,22 @@
-import React, { Component } from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import React, { Component } from 'react'
+import {Image,View, StyleSheet } from 'react-native'
+
 
 export default class App extends Component {
-    render() {
-        return (
+    render(){
+        return(
             <View style={styles.container}>
                 <View style={styles.cardContainer}>
                     <View style={styles.cardImageContainer}>
-
-                        <Image style={styles.cardImage} source={require('')} />        
+                        <Image style={styles.cardImage}        
+                               source={require('./user.png')}/>        
                     </View>
                 </View>
-
             </View>
         )
     }
 }
-
-const profileCardColor = 'dodgerblue'
-
+const profileCardColor = 'dodgerblue';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -26,7 +24,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     cardContainer: {
-        borderColor: 'black',        
+        borderColor: 'black',        
         borderWidth: 3,
         borderStyle: 'solid',
         borderRadius: 20,
@@ -34,7 +32,7 @@ const styles = StyleSheet.create({
         width: 300,
         height: 400
     },
-    cardImageContainer: {       
+    cardImageContainer: {       
         backgroundColor: 'white',
         borderWidth: 3,
         borderColor: 'black',
@@ -42,7 +40,7 @@ const styles = StyleSheet.create({
         height: 120,
         borderRadius: 60,
     },
-    cardImage: {        
+    cardImage: {        
         width: 80,
         height: 80
     }
