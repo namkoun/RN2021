@@ -5,13 +5,13 @@ React-Native 2021
 
 # 05월 28일
 
->1. navigation  install
+>1. navigation  install (설치)
 >npm install @react-navigation/native
 >
->2. Installing dependencies into a bare React Native project
+>2. Installing dependencies into a bare React Native project (설치)
 >npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
 
-3. 화면이동시
+>3. 화면이동시
  <a href="details.html">Go to Details</a>
  or 
  <a
