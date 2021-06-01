@@ -11,8 +11,9 @@ React-Native 2021
 >2. Installing dependencies into a bare React Native project (설치)
 >npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
 
->3. 화면이동시 <a href="details.html">Go to Details</a>
- or 
+>3. 화면이동시 
+> <a href="details.html">Go to Details</a>
+> or 
  <a
   onClick={() => {
     window.location.href = 'details.html';
