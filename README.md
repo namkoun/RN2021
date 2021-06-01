@@ -5,8 +5,47 @@ React-Native 2021
 
 # 05월 28일
 
->1. 
+>1. navigation  install
+>npm install @react-navigation/native
+>
+>2. Installing dependencies into a bare React Native project
+>npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
 
+3. 화면이동시
+ <a href="details.html">Go to Details</a>
+ or 
+ <a
+  onClick={() => {
+    window.location.href = 'details.html';
+  }}
+>
+  Go to Details
+</a>
+하지만 리액트네이티브에서는  onPress가 사용
+
+import * as React from 'react';
+import { Button, View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+function HomeScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Details')}
+      />
+    </View>
+  );
+}
+ 
+>4. Tab navigation( https://reactnavigation.org/docs/tab-based-navigation )
+    Drawer navigation( https://reactnavigation.org/docs/drawer-based-navigation )
+ 
+>5. npm install -g expo-cli (expo설치)
+    expo init ProjectName -> expo start -> Press w (실행됨)
+>6. createMaterialBottomTabNavigator expo에서 만들기 (https://reactnavigation.org/docs/material-bottom-tab-navigator)
 
 # 05월 07일
 >1. 중간고사 풀이
