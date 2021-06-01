@@ -11,9 +11,10 @@ React-Native 2021
 >2. Installing dependencies into a bare React Native project (설치)
 >npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
 
->3. 화면이동시 
-> <a href="details.html">Go to Details</a>
-> or 
+>3. 화면이동시
+``` 
+ <a href="details.html">Go to Details</a>
+ or 
  <a
   onClick={() => {
     window.location.href = 'details.html';
@@ -21,6 +22,8 @@ React-Native 2021
 >
   Go to Details
 </a>
+```
+```
 하지만 리액트네이티브에서는  onPress가 사용
 
 import * as React from 'react';
@@ -39,7 +42,7 @@ function HomeScreen({ navigation }) {
     </View>
   );
 }
- 
+ ```
  
 >4. Tab navigation( https://reactnavigation.org/docs/tab-based-navigation )
     Drawer navigation( https://reactnavigation.org/docs/drawer-based-navigation )
