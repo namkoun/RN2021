@@ -5,20 +5,20 @@ React-Native 2021
 
 # 06월 04일
 >1. redux install (설치) npm i redux react-redux (https://ko.redux.js.org/introduction/getting-started)
-> > 하나뿐인 전역  상태의 객채
-> > 전역 state를 만들고 관리하는 context를 이용해 동작
-> > state를 store로 이동시켜 데이터 관리
+> >1. 하나뿐인 전역  상태의 객채
+> >2. 전역 state를 만들고 관리하는 context를 이용해 동작
+> >3. state를 store로 이동시켜 데이터 관리
 
 >2. context
-> > 전역변수를 만드는 api
-> > props를사용하지 않고 데이터전달
+> >1. 전역변수를 만드는 api
+> >2. props를사용하지 않고 데이터전달
 
 >3. store
-> > 내부상태를 변경하는 방법
-> > 메서드가있는 개체
+> >1. 내부상태를 변경하는 방법
+> >2. 메서드가있는 개체
 
 >4. npm i uuid (설치) 랜덤문자열 생성 
-> >  uuidV4() << 호출
+> >1.  uuidV4() << 호출
 
 # 05월 28일
 
